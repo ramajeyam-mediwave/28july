@@ -145,11 +145,18 @@
                             Happy yaa irru...Jolly aa irru...santhosama irru...😊
                             Marakaama Treat Vachidu🕺😌💕
                         </h2>
-
+<h3><a id="gift-link" href="javascript:void(0);">Gift for you!</a></h3>
                         <div class="imageCute2">
                             <img src="cute2.png" alt="">
                         </div>
                     </div>
+                </div>
+                <div class="card3" style="display:none; text-align:center; padding: 20px;">
+                    <h3>Ring for you!</h3>
+                    <div class="imageRing">
+                        <img src="images/ring.jpg" alt="Ring Image" style="max-width: 50%; height: 50%; border-radius: 10px;">
+                    </div>
+                    <button id="close-ring" style="margin-top: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer;">Close</button>
                 </div>
             </div>
         </div>
@@ -272,5 +279,26 @@
             });
         }
     });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const giftLink = document.getElementById('gift-link');
+    const card1 = document.querySelector('.card1');
+    const card2 = document.querySelector('.card2');
+    const card3 = document.querySelector('.card3');
+    const closeRingBtn = document.getElementById('close-ring');
+
+    giftLink.addEventListener('click', function () {
+        card1.style.display = 'none';
+        card2.style.display = 'none';
+        card3.style.display = 'block';
+    });
+
+    closeRingBtn.addEventListener('click', function () {
+        card3.style.display = 'none';
+        card1.style.display = 'block';
+        card2.style.display = 'block';
+    });
+});
 </script>
 </html>
